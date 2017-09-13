@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stringi</title>
+    <title>Funkcje</title>
     <meta charset="utf-8">
 </head>
 <body>
 
+    <form id="formularz">
+        <h3>Co chcesz obliczyć:</h3>
+        Obwód: <input type="radio" name="wybor" value="1">
+        Pole: <input type="radio" name="wybor" value="2">
+        Objętość: <input type="radio" name="wybor" value="3">
 
+        <h3>Podaj dane:</h3>
+        <input type="text" name="r">
+        <input type="text" name="h">
+
+        <button onclick="oblicz()">Oblicz</button>
+    </form>
+    <div>Wynik: <span id="wynik"></span></div>
 
 
 <script src="js/funkcje.js"></script>
