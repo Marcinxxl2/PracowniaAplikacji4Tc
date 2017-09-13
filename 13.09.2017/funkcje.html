@@ -8,16 +8,17 @@
 
     <form id="formularz">
         <h3>Co chcesz obliczyć:</h3>
-        Obwód: <input type="radio" name="wybor" value="1">
-        Pole: <input type="radio" name="wybor" value="2">
-        Objętość: <input type="radio" name="wybor" value="3">
+        Obwód:<input type="radio" name="wybor" value="1">
+        Pole:<input type="radio" name="wybor" value="2">
+        Objętość:<input type="radio" name="wybor" value="3">
 
         <h3>Podaj dane:</h3>
-        <input type="text" name="r">
-        <input type="text" name="h">
+        Promień podstawy: <input type="text" name="r">
+        Wysokość: <input type="text" name="h">
 
-        <button onclick="oblicz()">Oblicz</button>
+        <button type="button" onclick="oblicz()">Oblicz</button>
     </form>
+    
     <div>Wynik: <span id="wynik"></span></div>
 
 

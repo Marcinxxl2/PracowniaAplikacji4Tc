@@ -48,20 +48,28 @@ console.log(poleObjetosc(2, 3, 4)[wybor]);
 
 function oblicz() {
     var form = document.forms["formularz"];
-    var wybor = form.wybor.value;
+    var wybor = parseInt(form.wybor.value);
+    var r = parseFloat(form.r.value);
+    var h = parseFloat(form.h.value);
+    const pi = Math.PI;
+    const rKwadrat = Math.pow(r, 2);
+    var wynik;
 
     switch (wybor) {
         case 1:
-            
+            wynik = 2 * pi * r;
             break;
         case 2:
-
+            wynik = pi * rKwadrat;
             break;
-        case 2:
-            
+        case 3:
+            wynik = (1/3) * pi * rKwadrat * h;
             break;
         default:
+            wynik = "Nie wybrano opcji";
             break;
     }
+
+    document.getElementById("wynik").innerHTML = wynik;
 }
 
