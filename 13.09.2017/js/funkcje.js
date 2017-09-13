@@ -44,9 +44,24 @@ console.log(poleObjetosc(2, 3, 4)[wybor]);
 */
 
 
-//Napisać skrypt, który oblicza obwód oraz objętość stożka. Dane użytkownik podaje z klawiatury i zaznacza co chce obliczyć w radio. Wynik wypisuje się w divie
+//Napisać skrypt, który oblicza obwód, pole oraz objętość stożka. Dane użytkownik podaje z klawiatury i zaznacza co chce obliczyć w radio. Wynik wypisuje się w divie
 
 function oblicz() {
-    var wybor = document.forms["formularz"];
+    var form = document.forms["formularz"];
+    var wybor = form.wybor.value;
+
+    switch (wybor) {
+        case 1:
+            
+            break;
+        case 2:
+
+            break;
+        case 2:
+            
+            break;
+        default:
+            break;
+    }
 }
 
