@@ -72,3 +72,5 @@ for (var i = 1; i <= 10; i++) {
     else
         document.write('<br>' + i + ' raz <br>');
 }
+
+//Użytkownik podaj z klawiatury wartość początkową i końcową pętli, po każdej liczbie przecinek
