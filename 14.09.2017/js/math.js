@@ -44,3 +44,20 @@ document.write(Math.abs(z) + '<br>'); //14.9
 document.write('<br>' + Math.round(x) + '<br>'); //-56
 document.write(Math.round(y) + '<br>'); //-13
 document.write(Math.round(z) + '<br>'); //15
+
+document.write('<br>' + Math.floor(x) + '<br>'); //-56
+document.write(Math.floor(y) + '<br>'); //-14
+document.write(Math.floor(z) + '<br>'); //14
+
+//potęgi
+
+var p = Math.pow(2, 10);
+console.log('Potęga:' + p); //1024
+
+var losuj = Math.random();
+console.log('Wylosowana liczba: ' + losuj);
+
+//Losuj z przedziału od 0 do 10;
+var wylosowana = Math.floor(Math.random() * (10 + 1));
+console.log('Wylosowana z przedziału: ' + wylosowana);
+
