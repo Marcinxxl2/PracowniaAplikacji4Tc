@@ -57,7 +57,18 @@ console.log('Potęga:' + p); //1024
 var losuj = Math.random();
 console.log('Wylosowana liczba: ' + losuj);
 
-//Losuj z przedziału od 0 do 10;
+//Losuj z przedziału od 0 do 10
 var wylosowana = Math.floor(Math.random() * (10 + 1));
 console.log('Wylosowana z przedziału: ' + wylosowana);
 
+for (var i = 0; i < 10; i++) {
+    var wylosowana = Math.floor(Math.random() * (90 + 1) + 10);
+    console.log('Wylosowana z przedziału: ' + wylosowana);
+}
+
+for (var i = 1; i <= 10; i++) {
+    if (i > 1)
+        document.write(i + ' razy <br>');
+    else
+        document.write('<br>' + i + ' raz <br>');
+}
