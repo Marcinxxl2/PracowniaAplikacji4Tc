@@ -64,18 +64,44 @@ document.write(liczby);
 
 //W domu: Użytkownik z klawiatury podaje maksymalną liczbę gwiazdek, zabezpiecz przed podaniem błędnych danych, użytkownik może wybrać wyświtlany znak
 
-/**
+/*
+
+*
 **
 ***
 ****
 ***
 **
-**/
+*
 
-var elLogin = document.getElementById('login');
-var elPass = document.getElementById('pass');
+*/
 
+document.getElementById("przycisk").onclick = function () {
+    iloscGwiazdek = document.getElementById("ilosc").value;
+    znak = document.getElementById("znak").value;
+    if (znak == "")
+        znak = "*";
+    elW = document.getElementById("wynik");
 
+    for (var i = 0; i < iloscGwiazdek * 2 ; i++)
+    {
+        if (i < iloscGwiazdek)
+        {
+            for (var j = 0; j <= i; j++)
+            {
+                elW.innerHTML += znak;
+            }
+        }
+        else
+        {
+            for (var j = (iloscGwiazdek * 2) - 1; j > i; j--)
+            {
+                elW.innerHTML += znak;
+            }
+        }
+        elW.innerHTML += '<br>';
+    }
+}
 
 
 
