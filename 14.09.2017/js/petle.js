@@ -33,6 +33,7 @@ for (var i = a; i <= b; i++) {
 
 //Podaj 5 liczb podzielnych przez 2 z klawiatury, Zapisz je do tablicy i wyświelt na stronie
 
+/*
 var liczby = new Array;
 var podana;
 
@@ -44,3 +45,40 @@ for (var i = 0; i < 5; i++) {
 }
 
 document.write(liczby);
+*/
+
+//Program wyświtlający liczby od 1 do 10 w pięciu rzędach. Po każdej liczbie ma być przecinek, a po ostaniej w każdym rzędzie ma być kropka
+
+/*for (var i = 0; i < 5; i++)
+{
+    for (var j = 1; j <= 10; j++)
+    {
+        document.write(j)
+        if (j == 10)
+            document.write('. ');
+        else
+            document.write(', ');
+    }
+    document.write('<br>');
+}*/
+
+//W domu: Użytkownik z klawiatury podaje maksymalną liczbę gwiazdek, zabezpiecz przed podaniem błędnych danych, użytkownik może wybrać wyświtlany znak
+
+/**
+**
+***
+****
+***
+**
+**/
+
+var elLogin = document.getElementById('login');
+var elPass = document.getElementById('pass');
+
+
+
+
+
+
+
+
