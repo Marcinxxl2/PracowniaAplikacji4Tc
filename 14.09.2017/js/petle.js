@@ -76,7 +76,7 @@ document.write(liczby);
 
 */
 
-document.getElementById("przycisk").onclick = function () {
+/*document.getElementById("przycisk").onclick = function () {
     iloscGwiazdek = document.getElementById("ilosc").value;
     znak = document.getElementById("znak").value;
     if (znak == "")
@@ -101,10 +101,21 @@ document.getElementById("przycisk").onclick = function () {
         }
         elW.innerHTML += '<br>';
     }
+}*/
+
+//forEach
+
+var tab = ['Anna', 'Adrian', 'Janusz', 'Andrzej'];
+
+/*for (var i = 0; i < tab.length; i++) {
+    document.write(tab[i] + ', ');
+}*/
+
+function p(wartosc, indeks) {
+    document.write(indeks + ' ' + wartosc);
 }
 
-
-
+tab.forEach(p);
 
 
 
