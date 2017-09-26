@@ -39,11 +39,18 @@ elAuta[0].className = "grey";
 var elImie = document.querySelector('li.grey');
 elImie.className = 'zielony';
 
-//querySelector()
+//querySelectorAll()
 
+/* 
 var elImiona = document.querySelectorAll('li.grey');
 console.log(elImiona);
-elImiona[0].className = 'zielony';
+elImiona[0].className = 'zielony'; 
+*/
 
 //W domu
-//Zmień wszytskie elemnty z imion na inny kolor tła
+//Zmień wszystkie elementy w liście z imionami na czerwone, wykorzystaj metodę forEach oraz querySelectorAll
+
+var elImiona = document.querySelectorAll('li.grey');
+elImiona.forEach(function (imie) {
+    imie.className = 'czerwony';
+});
