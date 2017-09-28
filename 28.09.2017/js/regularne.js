@@ -56,8 +56,7 @@ function testuj() {
 elTekst.addEventListener('input', testuj);*/
 
 /*var pliki = 'plik.mp3 arkusz.csv muzyka.mp3 tekst.txt';
-var regEx = /(\w+\.mp3)/;
-var sprawdz = regEx.exec(pliki);
+var regEx = /(\w+\.mp3)/g;
+var sprawdz = regEx.match(pliki);
 console.log(sprawdz);*/
 
-//NIE DZIAŁA??????
