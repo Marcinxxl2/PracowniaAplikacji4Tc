@@ -64,7 +64,10 @@ produkt.waga = 8;
 produkt.cena = 1500;
 
 produkt.wyswietl = function() {
-    return 'Nazwa produktu: ' + this.nazwa + '<br>Firma: ' + this.firma + '<br>Model: ' + this.model + '<br>Waga: ' + this.waga + '<br>Cena: ' + this.cena;
+    produkt.forEach(function(el) {
+        if (typeof(el) !== 'function') {
+            document.write(el + '<br>');
+        }
+    });
 }
-
-document.write(produkt.wyswietl());
+produkt.wyswietl();

@@ -22,7 +22,17 @@ var regMail = /^[a-z]{1}[\w|\.|\-]{0,30}@(\w{1,20}\.){1,7}[a-z]{1,3}$/i;
 //Hasło musi być bezpieczne (małe litery, duże litery, cyfry, znak specjalny, minimum 8 znaków)
 var regPass = /^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W\_]).{8,35})$/;
 
-
+dzisiejszaData = new Date();
+var rok = dzisiejszaData.getFullYear().toString();
+var miesiac = (dzisiejszaData.getMonth() + 1).toString();
+if (dzisiejszaData.getDay() < 10) {
+    var dzien = '0' + dzisiejszaData.getDay().toString();
+} else {
+    var dzien = dzisiejszaData.getDay().toString();
+}
+var data = rok + '-' + miesiac + '-' + dzien;
+elData.setAttribute('max', data);
+ 
 function sprawdzImie() {
     var sprawdz = regImie.test(elImie.value);
     if (sprawdz) {
@@ -88,7 +98,7 @@ function pass() {
         elPass1.disabled = false;
         elPass1.focus();
         this.disabled = true;
-        elKomunikat.textContent = 'Adresy poczty są różne';
+        elKomunikat.textContent = 'Hasła się nie zgadzają';
     } else {
         elKomunikat.textContent = '';
         elPass1.focus();
@@ -126,16 +136,6 @@ function odblokuj() {
     }
 }
 
-function wyslij() {
-    document.write('<div></div>');
-    document.write('Imie: ' + '<span class="czerwony">' + elImie.value + '</span><br>');
-    document.write('Nazwisko: ' + '<span class="czerwony">' + elNazwisko.value + '</span><br>');
-    document.write('Login: ' + '<span class="czerwony">' + elLogin.value + '</span><br>');
-    document.write('Mail: ' + '<span class="czerwony">' + elMail1.value + '</span><br>');
-    document.write('Data urodzenia: ' + '<span class="czerwony">' + elData.value + '</span><br>');
-
-}
-
 elImie.addEventListener('blur', sprawdzImie);
 elNazwisko.addEventListener('blur', sprawdzNazwisko);
 elLogin.addEventListener('blur', sprawdzLogin);
@@ -147,5 +147,40 @@ elRegulamin.addEventListener('change', regulamin);
 elPrzycisk.addEventListener('click', wyslij)
 elPopraw.addEventListener('click', odblokuj);
 
-//Zad dom: zamień wielkość liter w imieniu, pierwsza duża, następne małe. Zamień wielkość liter w nazwisku np. kOwal-jAN (Kowal-Janusz). Data musi być mniejsza od daty dzisiejszej.
+function wyslij() {
+
+    var imie = elImie.value.toString();
+    var imiePoprawne = '';
+    
+    for (var i = 0; i < imie.length; i++) {
+        if (i == 0) {
+            imiePoprawne += imie.charAt(i).toUpperCase();
+        } else {
+            imiePoprawne += imie.charAt(i).toLowerCase();
+        }
+    }
+
+    var nazwisko = elNazwisko.value.toString();
+    var nazwiskoPoprawne = '';
+
+    for (var i = 0; i < nazwisko.length; i++) {
+        if (i == 0) {
+            nazwiskoPoprawne += nazwisko.charAt(i).toUpperCase();
+        } else if (nazwisko.charAt(i - 1) == '-') {
+            nazwiskoPoprawne += nazwisko.charAt(i).toUpperCase();
+        } else {
+            nazwiskoPoprawne += nazwisko.charAt(i).toLowerCase();
+        }
+    }
+
+    document.write('<div></div>');
+    document.write('Imie: ' + '<span class="czerwony">' + imiePoprawne + '</span><br>');
+    document.write('Nazwisko: ' + '<span class="czerwony">' + nazwiskoPoprawne + '</span><br>');
+    document.write('Login: ' + '<span class="czerwony">' + elLogin.value + '</span><br>');
+    document.write('Mail: ' + '<span class="czerwony">' + elMail1.value + '</span><br>');
+    document.write('Data urodzenia: ' + '<span class="czerwony">' + elData.value + '</span><br>');
+
+}
+
+//Zad dom: zamień wielkość liter w imieniu, pierwsza duża, następne małe. Zamień wielkość liter w nazwisku np. kOwal-jANusZ (Kowal-Janusz). Data musi być mniejsza od daty dzisiejszej.
 
