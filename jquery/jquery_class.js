@@ -12,7 +12,7 @@ $(document).ready(function(){
 		//$('#akapit').removeClass('tlo1');
 		//$('#akapit').removeClass();
 		alert($('#akapit').hasClass('tlo1'));
-	})
+	});
 
 
 });
