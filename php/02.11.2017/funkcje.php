@@ -67,6 +67,9 @@
 	suma1(); //Teraz zapamięta co było w poprzednim wywołaniu funkcji
 
 	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-	//W domu 3: użytkownik podaje z klawiatury ilość pieniędzy jakie dostał za pracę (w formularzu). Wstaw sumy do tablicy. Stwórz tablice asocjacyjną, której kluczami będą miesiące. Suma za pracę będzie automatycznie wstawiana do tablicy w zależności od miesiąca. Wstaw również do tablicy potwierdzenie dotyczące daty, godziny, minut i sekund w jakiej użytkownik dostał pieniądze. Użytkownik może wybrać okres w jakim chce sprawdzić ile zarobił jak również średni zarobek z trzech ostatnich miesięcy oraz całego roku.
+	//W domu 3: użytkownik podaje z klawiatury ilość pieniędzy jakie dostał za pracę (w formularzu). Wstaw sumy do tablicy. 
+	//Stwórz tablice asocjacyjną, której kluczami będą miesiące. Suma za pracę będzie automatycznie wstawiana do tablicy w zależności od miesiąca. 
+	//Wstaw również do tablicy potwierdzenie dotyczące daty, godziny, minut i sekund w jakiej użytkownik dostał pieniądze. 
+	//Użytkownik może wybrać okres w jakim chce sprawdzić ile zarobił jak również średni zarobek z trzech ostatnich miesięcy oraz całego roku.
 
 ?>

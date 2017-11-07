@@ -91,7 +91,23 @@
 
 	echo $zaTydzien = strtotime('next week'), '<br>'; //1509956668
 	echo $jutro = strtotime('tomorrow'), '<br>'; //1509663600
-	echo $przyszlosc = strtotime('+10 day'), '<br>';
+	echo $przyszlosc = strtotime('+10 day'), '<br><br><br>';
+	echo '<h3>Zadanie domowe:</h3>';
+
+	$miesiace = array('Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień');
+	$dniTygodnia = array('Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela');
+	$dzien = date('d');
+	if (date('d') < 10) {
+		$dzien = ' '.$dzien;
+	}
+	$miesiac = $miesiace[(date('m') - 1)];
+	$rok = date('Y');
+	$dzienTygodnia = $dniTygodnia[(date('N') - 1)];
+	$iloscDniWRoku = date('L') + 365;
+	$godzina = date('H:i:s');
+
+	//Wynik
+	echo '<h2>'.$dzien.' '.$miesiac.' '.$rok.' r. | Godzina: '.$godzina.' | Rok '.$rok.' ma: '.$iloscDniWRoku.' dni</h2>';
 
 
 
