@@ -6,9 +6,10 @@
 </head>
 <body>
 	<form>
-	
 		<input type="text" name="folder">
 		<input type="submit">
+		<input type="text" name="plik">
+		<input type="submit" name="przyciskP">
 	</form>
 	<?php
 		
@@ -35,7 +36,20 @@
 				rmdir($dir.'/'.$folder); //Usuwanie folderu
 			} 
 		}
-		
+	
+		if (isset($_GET['przyciskP']) && !empty($_GET['plik'])) {
+		$plik = $_GET['plik'];
+			if (!file_exists("./test/$plik")) {
+			
+				//Tworzy plik jeśli go niema, "w" oznacza możliwość zapisu
+				if ($fd = fopen("./test/$plik", 'w')) { 
+					if (file_exists("./test/$plik")) {
+						echo 'Dodano plik';
+					}
+					fclose($fd);
+				} 
+			}
+		} 
 		
 	
 		if (!($folder = opendir($dir))) { //Sprawdza czy udało się otworzyć folder
@@ -77,6 +91,8 @@
 			echo '</ul>';
 			
 		}
+	
+		
 	
 	?>
 	
